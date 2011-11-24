@@ -19,6 +19,10 @@ pavlov.specify("Domo.js", function(){
 		assert(Domo.canonize("ebay.com")).equals("ebay.com");
 	});
 
+        it("should strip 'http://www.ebay.com/shopping/1.html'", function() {
+                assert(Domo.stripUrl("http://www.ebay.com/shopping/1.html")).equals("www.ebay.com");
+        });
+
     });
 
 });
