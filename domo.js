@@ -11,12 +11,12 @@
     root.Domo = {
 
         /**
-         * Returns a canonized domain for a given domain string
+         * Returns a canonicalized domain for a given domain string
          *   "www.cnn.com"           => "cnn.com"
          *   "books.ebay.co.uk"      => "ebay.co.uk"
          *   "news.nytimes.com:3000" => "nytimes.com"
          */
-        canonize : function(domain) {
+        canonicalize : function(domain) {
             var parts = domain.split(".").reverse();
             var checkFurther = true;
             var i = 0;

@@ -3,20 +3,20 @@ pavlov.specify("Domo.js", function(){
     describe("Domo.js", function(){
 
 
-	it("should canonize 'www.ebay.com'", function() {
-		assert(Domo.canonize("www.ebay.com")).equals("ebay.com");
+	it("should canonicalize 'www.ebay.com'", function() {
+		assert(Domo.canonicalize("www.ebay.com")).equals("ebay.com");
 	});
 
-	it("should canonize 'motors.ebay.com'", function() {
-		assert(Domo.canonize("motors.ebay.com")).equals("ebay.com");
+	it("should canonicalize 'motors.ebay.com'", function() {
+		assert(Domo.canonicalize("motors.ebay.com")).equals("ebay.com");
 	});
 
-	it("should canonize 'www.ebay.co.uk'", function() {
-		assert(Domo.canonize("www.ebay.co.uk")).equals("ebay.co.uk");
+	it("should canonicalize 'www.ebay.co.uk'", function() {
+		assert(Domo.canonicalize("www.ebay.co.uk")).equals("ebay.co.uk");
 	});
 
-	it("should canonize 'ebay.com'", function() {
-		assert(Domo.canonize("ebay.com")).equals("ebay.com");
+	it("should canonicalize 'ebay.com'", function() {
+		assert(Domo.canonicalize("ebay.com")).equals("ebay.com");
 	});
 
         it("should strip 'http://www.ebay.com/shopping/1.html'", function() {

@@ -9,13 +9,13 @@ Download `domo.js` and include it in your HTML file by sticking the following li
 
 Now you can use Domo's functions on domain strings. Try it in code or in a javascript console:
 
-    > Domo.canonize("www.ebay.com")
+    > Domo.canonicalize("www.ebay.com")
     => "ebay.com"
 
-    > Domo.canonize("boats.ebay.co.uk")
+    > Domo.canonicalize("boats.ebay.co.uk")
     => "ebay.co.uk"
 
-    > Domo.canonize("edition.cnn.com")
+    > Domo.canonicalize("edition.cnn.com")
     => "cnn.com"
 
     > Domo.stripUrl("http://www.cnn.com/news/last-week/main.html")
