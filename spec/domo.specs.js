@@ -19,8 +19,24 @@ pavlov.specify("Domo.js", function(){
 		assert(Domo.canonicalize("ebay.com")).equals("ebay.com");
 	});
 
+        it("should canonicalize 'ebay.com:3897'", function() {
+                assert(Domo.canonicalize("ebay.com:3897")).equals("ebay.com");
+        });
+
+        it("should return null given a false input to canonicalize", function() {
+                assert(Domo.canonicalize(null)).equals(null);
+        });
+
         it("should strip 'http://www.ebay.com/shopping/1.html'", function() {
                 assert(Domo.stripUrl("http://www.ebay.com/shopping/1.html")).equals("www.ebay.com");
+        });
+
+        it("should return null when stripping an empty URL", function() {
+                assert(Domo.stripUrl("")).equals(null);
+        });
+
+        it("should return null given a false input to strip", function() {
+                assert(Domo.stripUrl(null)).equals(null);
         });
 
     });

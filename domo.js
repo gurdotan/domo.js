@@ -17,7 +17,11 @@
          *   "news.nytimes.com:3000" => "nytimes.com"
          */
         canonicalize : function(domain) {
-            var parts = domain.split(".").reverse();
+            if (!domain) return null;
+
+            // Split by ":" to remove possible port
+            // Split by "." and reverse to get domain components
+            var parts = domain.split(":")[0].split(".").reverse();
             var checkFurther = true;
             var i = 0;
 
@@ -38,7 +42,9 @@
          *   "http://www.ebay.com/shopping/1.html"  =>  "www.ebay.com"
          */
         stripUrl : function(url) {
-            return url.match(/:\/\/(.[^/]+)/)[1];
+            if (!url) return null;
+            var match = url.match(/:\/\/(.[^/]+)/);
+            return match ? match[1] : null;
         }
 
     };
